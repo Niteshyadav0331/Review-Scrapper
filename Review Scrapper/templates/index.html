@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 class = "mt-3" style="text-align: center">Search Product</h1>
+
+    <div class="form">
+        <form action="/scrap" method="POST" class="mt-4 d-flex gap-3">
+            <input class="form-control" type="text" placeholder="Search Product For Reviews" aria-label="Search" name="content" id="content">
+            <input class="btn btn-outline-dark" type="submit" value="Search">
+        </form>
+    </div>
+</div>
+{% endblock %}
